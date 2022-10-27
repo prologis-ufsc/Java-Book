@@ -5,8 +5,10 @@ bookdown::gitbook:
       before: |
         <li><a href="./">Java Programming for Industrial Engineering</a></li>
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
+        <li><a href="https://www.linkedin.com/in/djonquadras/" target="blank">LinkedIn - Djonathan</a></li>
+        <li><a href="https://www.linkedin.com/in/bruna-rigon-de-oliveira/" target="blank">LinkedIn - Bruna</a></li>
+        <li><a href="https://www.linkedin.com/in/julia-cristina-bremen/" target="blank">LinkedIn - Julia</a></li>
+        <li><a href="https://www.linkedin.com/in/enzofrazzon/" target="blank">LinkedIn - Dr.-Ing. Enzo</a></li>
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
