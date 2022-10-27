@@ -1,0 +1,143 @@
+# Operadores
+
+Um artifício essencial para quem programa é a utilização de operadores. Sejam eles matemáticos, lógicos ou relacionais, é praticamente impossível desenvolver um código sem utilizar um operador. Nessa seção serão apresentados e explicados os operadores em linguagem Java.
+
+
+## Operações Matemáticas
+
+É muito comum utilizarmos as operações matemáticas em programação. Frequentemente estaremos somando ou subtraindo duas variáveis. Com isso, torna-se necessário conhecer os operadores matemáticos em java. Os básicos estão listados na tabela abaixo.
+
+```{r, echo=FALSE}
+library(tibble)
+library(knitr)
+tabela <- tibble(Operador = c("+", "-", "*", "/", "%"),
+                 Uso = c("x + y","x - y", "x*y", "x/y", "x%y"),
+                 "Descrição" = c("Soma x e y",
+                               "Subtrai y de x",
+                               "Multiplica x por y",
+                               "Divide x por y",
+                               "Calcula o resto da divisão de x por y"))
+kable(tabela,  
+      caption = "Operações Matemáticas")
+```
+
+Existem também os operadores incrementais. Estes operadores são utilizados quando queremos acrescentar (ou diminuir) uma unidade no valor de uma variável. Eles estão listados na tabela abaixo.
+
+```{r, echo=FALSE}
+library(tibble)
+library(knitr)
+tabela <- tibble(Operador = c("++", "++", "--", "--"),
+                 Uso = c("b++","b++", "b--", "b--"),
+                 "Descrição" = c("Incrementa 1 em b, avaliando b antes de incrementar",
+                               "Incrementa 1 em b, avaliando b depois de incrementar",
+                               "Decrementa 1 em b, avaliando b antes de incrementar",
+                               "Decrementa 1 em b, avaliando b depois de incrementar"))
+kable(tabela,  
+      caption = "Operações Matemáticas Úteis")
+```
+
+## Operadores Relacionais
+
+Os operadores relacionais são utilizados quando queremos estabelecer relações entre as variáveis, ou seja, quando queremos comparar uma variável com a outra. Eles estão apresentados na tabela abaixo.
+
+```{r, echo=FALSE}
+library(tibble)
+library(knitr)
+tabela <- tibble(Operador = c(">", ">=", "<", "<=", "==", "!="),
+                 Uso = c("x > y","x >= y", "x < y", "x <= y", "x == y", "x != y"),
+                 "Descrição" = c("x é maior que y",
+                               "x é maior ou igual a y",
+                               "x é menor que y",
+                               "x é menor ou igual a y",
+                               "x é igual a y",
+                               "x é diferente de y"))
+kable(tabela,  
+      caption = "Operações Relacionais")
+```
+
+Para utilizar outras ferramentas matemáticas, é necessário invocar a classe matemática do Java. Para isso, faz-se `double valor = Math.` e seleciona-se a função desejada (irá aparecer automaticamente uma lista com todas as opções possíveis. Por exemplo, é possível calcular a raiz quadrada, exponencial e cosseno conforme apresentado a seguir.
+
+```{java}
+double raiz = Math.sqrt(9); // raiz quadrada
+double exponencial = Math.exp(2); // e elevado ao quadrado
+double cosseno  = Math.cos(Math.PI); //cosseno de pi em radianos
+```
+
+## Lógica Booleana e Operadores Lógicos
+
+A lógica booleana foi desenvolvida no século 19 pelo matemático George Boole como um esquema para usar métodos algébricos na formalização da lógica e raciocínio. A álgebra booleana trabalha com dois números, 1 e 0. Para a programação, trataremos 1 como sendo “Verdadeiro” e 0 como sendo “falso”.
+
+As funções relacionais sempre gerarão resultados booleanos. Dessa forma, é possível utilizar operadores lógicos para trabalhar com as informações e gerar novos resultados. Os operadores lógicos são amplamente utilizados quando queremos criar expressões lógicas. Os operadores lógicos estão apresentados na tabela abaixo.
+
+```{r, echo=FALSE}
+library(tibble)
+library(knitr)
+tabela <- tibble(Operador = c("&", "| ou ||", "^", "!"),
+                 "Descrição" = c("AND lógico",
+                                 "OR lógico",
+                                 "XOR lógico",
+                                 "NOT lógico"))
+kable(tabela,  
+      caption = "Operações Matemáticas Úteis")
+```
+
+### Operador AND
+
+O operador AND, ou “e”, retorna “verdadeiro” só e somente só quando está comparando dois booleanos com valor “verdadeiro.
+
+```{r, echo=FALSE}
+library(tibble)
+library(knitr)
+tabela <- tibble("Valor 1" = c("true", "true", "false"),
+                 "Operador" = c("&", "&", "&"),
+                 "Valor 2" = c("true", "false", "false"),
+                 "Resultado" = c("true", "false", "false"))
+kable(tabela,  
+      caption = "Operações com Operador AND")
+```
+
+### Operador OR
+
+O operador OR, ou “ou”, retorna “verdadeiro” quando está comparando dois booleanos em que ao menos um tenha valor “verdadeiro.
+
+```{r, echo=FALSE}
+library(tibble)
+library(knitr)
+tabela <- tibble("Valor 1" = c("true", "true", "false"),
+                 "Operador" = c("|", "|", "|"),
+                 "Valor 2" = c("true", "false", "false"),
+                 "Resultado" = c("true", "true", "false"))
+kable(tabela,  
+      caption = "Operações com Operador OR")
+```
+
+### Operador XOR
+
+O operador XOR, ou “ou exclusivo”, retorna “verdadeiro” se só e somente só estiver comparando dois booleanos em que somente um dos valores seja “verdadeiro.
+
+```{r, echo=FALSE}
+library(tibble)
+library(knitr)
+tabela <- tibble("Valor 1" = c("true", "true", "false"),
+                 "Operador" = c("^", "^", "^"),
+                 "Valor 2" = c("true", "false", "false"),
+                 "Resultado" = c("false", "true", "false"))
+kable(tabela,  
+      caption = "Operações com Operador XOR")
+```
+
+### Operador NOT
+
+O operador NOT, ou “não”, retorna o valor contrário ao valor escolhido. Note que este operador compara dois valores, apenas muda de verdadeiro para falso e vice-versa.
+
+```{r, echo=FALSE}
+library(tibble)
+library(knitr)
+tabela <- tibble("Operador" = c("!", "!", "!!"),
+                 "Valor" = c("true", "false", "true"),
+                 "Resultado" = c("false", "true", "true"))
+kable(tabela,  
+      caption = "Operações com Operador XOR")
+```
+
+##Exercícios {-}

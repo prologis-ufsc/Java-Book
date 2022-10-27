@@ -1,0 +1,64 @@
+# Classes e Interfaces Importantes em Java
+
+Working on it :)
+
+## Classes
+
+Working on it :)
+
+### Importando Classes
+
+Frequentemente enfrentamos problemas em programação que já foram solucionados por outros programadores. Linguagens como Python e R utilizam muito o conceito de pacotes na programação. Por exemplo, se você pretende criar gráficos em R dificilmente você irá criar ele desde o início, mas usará um pacote já existente. Neste caso, o pacote `ggplot2` é o mais utilizado.
+
+A linguagem Java também tem a função de importar classes já existentes para facilitar a programação. Conhecer as principais classes e suas aplicações são muito úteis. Para que seja possível utilizar as classes, é necessário inicialmente importa-la. Por padrão, as primeiras linhas dos códigos (antes de serem instanciadas as classes) são utilizadas para essa finalidade.
+
+```{java}
+//Espaço para importar classes
+
+public class Main {
+    public static void main(String[] args){
+        System.out.println("Hello World!");
+    }
+}
+```
+
+O código para importar classes é imposto por `“import + nome do pacote + nome da classe”`. Diferentemente das linguagens Python e R, é necessário que esses pacotes já estejam no ambiente de desenvolvimento Java pois a linguagem não busca os pacotes diretamente da internet.
+
+Um caso de pacote frequentemente utilizado é o `java.util`, que contém classes extremamente utilizadas como `ArrayList` e `Random`. Para importar esse pacote, basta digitar o código abaixo no local já indicado.
+
+```{java}
+import java.util.ArrayList; //Importa apenas uma classe do pacote java.util
+import java.util.*; // Importa todas as classes do pacote java.util
+```
+
+Note que na segunda linha de código não foi especificado o nome da classe. Isso quer dizer que na primeira linha apenas a classe `ArrayList` está sendo importada, enquanto na segunda todas as classes (incluindo a `ArrayList`) do pacote `java.util` estão sendo importadas.
+
+## Interfaces
+
+Working on it :)
+
+### Comparable
+
+Classe para ordenar objetos.
+
+#### Aplicando {-}
+
+Passo 1: implementar a interface `Comparable` na classe com base no código abaixo.
+
+```{java}
+public class Classe implements Comparable<Classe>
+```
+
+Passo 2: Reescrevendo o método `compareTO(Classe objeto)` como no exemplo abaixo.
+
+```{java}
+@Override
+public int compareTo(Individual individual) {
+
+    double compareQuantity = 100*((Individual) individual).getCost();
+    double thisCost = 100*this.cost;
+
+    //ascending order
+    return (int) Math.round(thisCost - compareQuantity);
+}
+```

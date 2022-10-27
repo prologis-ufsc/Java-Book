@@ -1,0 +1,80 @@
+# Estruturas de Repetição
+
+Nas linguagens de programação as estruturas de repetição são utilizadas para executar um conjunto de instruções ou funções repetidamente baseando-se em uma condição que determinará a continuação ou não da repetição. Existem três tipos: *for*, *while* e *do-while*, que serão explicados abaixo.
+
+## For
+
+A estrutura *for* é um comando de controle de fluxo que repete uma parte do código múltiplas vezes. É utilizado quando ocorrerá um número pré-determinado de repetições. Sua estrutura em Java é apresentada abaixo.
+
+```{java}
+for(int i = valorMinimo; i <= valorMaximo; i++){
+    //Código
+}
+```
+
+Dentro do parêntesis há quatro informações que devem ser declaradas: qual a variável que será utilizada como controle da repetição, seu valor inicial, seu valor final (critério de parada) e, por fim, quanto deve ser incrementado ou decrementado a cada repetição à variável.
+
+## While
+
+A estrutura `while` é um comando de controle de fluxo que executa uma parte do código múltiplas vezes baseado em uma dada condição booleana. É utilizado quando o número de repetições não é pré-determinado. A estrutura do código é apresentada abaixo.
+
+```{java}
+while (erro > erroMaximo){
+    //Código
+}
+```
+
+Dentro do parêntesis há apenas uma informação que deve ser preenchida: a condição de parada. Essa condição é estabelecida por uma lógica booleana, geralmente comparando dois valores. No exemplo temos a comparação de dois erros pois esta é uma lógica clássica aplicada a este tipo de repetição.
+
+## Do-While
+
+A estrutura `do-while` é um comando de controle e fluxo que executa uma parte do código pelo menos uma vez e a execução posterior depende da condição booleana especificada. É utilizado quando o número de iterações não é pré-determinado mas o código deve ser executado ao menos uma vez.
+
+Note que a diferença de um código para o outro está simplesmente no fato de a lógica booleana na estrutura `while` ser avaliada antes de correr o código, enquanto na estrutura `do-while` ela é avaliada após correr uma vez. A estrutura do código é apresentada abaixo.
+
+```{java}
+do{
+    //Código
+}while (erro > erroMaximo);
+```
+
+Dentro do parêntesis há apenas uma informação que deve ser preenchida: a condição de parada. Essa condição é estabelecida por uma lógica booleana, geralmente comparando dois valores. No exemplo temos a comparação de dois erros pois esta é uma lógica clássica aplicada a este tipo de repetição.
+
+## Exercicios {-}
+
+1. Qual a diferença de aplicação das estruturas de repetição *for*, *while* e *do-while*?
+2.  Faça um código que conte até 10 no console.
+3. Faça um código que conte até 20, de 2 em 2.
+4. Faça um código que conte regressivamente de 10 a 0.
+5. Considere dois inteiros, a e b. Faça um programa que encontre a partir de qual o valor de a, quando elevado ao quadrado, será maior que b.
+6. Teste no programa os dois códigos abaixo. Perceba que eles têm o mesmo critério de parada. O que ocorre? Por que os resultados são diferentes?
+
+Código 1:
+
+```{java}
+public class Main {
+    public static void main(String[] args) {
+        int i = 0;
+        while (i != 0){
+            System.out.println(i);
+            i++;
+        }
+        System.out.println(i);
+    }
+}
+```
+
+Código 2:
+
+```{java}
+public class Main {
+    public static void main(String[] args) {
+        int i = 0;
+        do {
+            System.out.println(i);
+            i++;
+        } while (i != 0);
+        System.out.println(i);
+    }
+}
+```

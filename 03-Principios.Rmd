@@ -1,0 +1,81 @@
+# Basics of Java Programming
+
+The Java language is considered to be low-level, that is, its programming (and consequently its reading) is not trivial as if we were writing a book. It presents itself as a very bureaucratic language that needs several processes to function correctly. A code in Java should always be assembled with a structure similar to the one shown in the figure below.
+
+![Classes](imagens/imagem clases.png)
+
+A code is usually composed of Classes and Objects. These points will be explained in the following subsections.
+
+## Classes
+
+Programming classes are recipes for an object, which have characteristics and behaviors, thus allowing to store properties and methods within it. A class usually represents a noun, for example a person, a place or a system.
+
+Let's imagine a university. It is made up of several classes: students, teachers, buildings, classrooms. Note that a class can be part of another class, that is, all classes presented are part of a larger class called a university. But what makes one class different from another? The difference, in addition to the name given, is in the objects that make up the class.
+
+## Objects
+
+Objects are characterized by attributes and methods and are characteristics defined by classes.
+
+### Attributes or Properties
+
+Attributes are the characteristics of an object. These characteristics are also known as variables. Using the example of dogs, we have some attributes, such as: color, weight, height and name.
+
+### Methods
+
+Methods are the actions that objects can perform when requested, where they can interact and communicate with other objects. Using the example of dogs, we have some examples: barking, running, jumping.
+
+## Variables
+
+Variables are a way to save information on your computer. The variables that we store in a program are accessed by the name we give them.
+
+A variable can have its value changed throughout the program, that is, its value is variable. It is only necessary to tell the computer what type of information will be stored and then give the value a name. There are many types of data that can be used to define a variable. The main ones are listed below.
+
+```{r, echo=FALSE}
+library(tibble)
+library(knitr)
+tabela <- tibble("Type" = c("int", "double", "boolean",
+                            "String", "char"),
+                 "Description" = c("Integers", "Decimals","True or False", "Texts", "Characters"))
+kable(tabela,  
+      caption = "Types of Variables")
+```
+
+There are several other types of variables, which will be presented in more detail in the following sections.
+
+## Creating the first code in Java
+
+The first step in creating Java code is creating a class. By default, the main class of your program is called “Main”.
+
+```{java}
+public class Main{
+  //Hey! I am a class!
+}
+```
+
+Note a few important points:
+
+- The code starts with the word “*public*”. This indicates that your class can be found by other classes that are saved in the same directory. You can change it to “*private*” or “*protected*”;
+- There is presence of braces `{ }` in the code. This is a language bureaucracy. The class matches what's inside the braces. Anything outside of them will not be considered part of the code;
+- To make comments in Java, use two forward slashes `//` .
+
+Now that we have our class created, we need to create the objects. For now let's create just one method.
+
+```{java}
+public class Main{
+  public static void main(String[] args){
+    System.out.println("Hello World!");
+  }
+}
+```
+
+Now, inside our class, the main method has been created. This also follows a pattern imposed by the language. There are, again, some points that deserve to be highlighted.
+
+- The “System.out.println()” function is used to write some text in the console;
+- All lines of code must be terminated with a semicolon.
+
+Putting this code to run, the message “*Hey, Hello World*!” should appear on the console. Ready! You've just created your first code!
+
+
+### Creating Variables
+
+Working on it! :)

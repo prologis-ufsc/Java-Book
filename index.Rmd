@@ -1,0 +1,21 @@
+--- 
+title: "Java Programming for Industrial Engineering"
+author: "Djonathan Quadras, Bruna Rigon and Julia Bremen"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+description: |
+  With applications in Logistics and Supply Chain
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# Welcome! {-}
+
+Welcome to the Java Programming for Industrial Engineering!
+
+As you can see, the book is still in development and may have several errors (as well as being incomplete).
+
+If you have any questions or suggestions, feel free to contact me!
+
+email: djonquadras@gmail.com

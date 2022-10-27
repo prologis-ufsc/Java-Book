@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Java Programming for Industrial Engineering</title>
+  <meta name="description" content="With applications in Logistics and Supply Chain" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Java Programming for Industrial Engineering" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="With applications in Logistics and Supply Chain" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Java Programming for Industrial Engineering" />
+  
+  <meta name="twitter:description" content="With applications in Logistics and Supply Chain" />
+  
+
+<meta name="author" content="Djonathan Quadras, Bruna Rigon and Julia Bremen" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="priciples-of-programming.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Java Programming for Industrial Engineering</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome!</a></li>
+<li class="chapter" data-level="" data-path="priciples-of-programming.html"><a href="priciples-of-programming.html"><i class="fa fa-check"></i>Priciples of Programming</a>
+<ul>
+<li class="chapter" data-level="" data-path="priciples-of-programming.html"><a href="priciples-of-programming.html#about-the-book"><i class="fa fa-check"></i>About the book</a></li>
+<li class="chapter" data-level="" data-path="priciples-of-programming.html"><a href="priciples-of-programming.html#tools"><i class="fa fa-check"></i>Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="programming-logic-and-syntax.html"><a href="programming-logic-and-syntax.html"><i class="fa fa-check"></i><b>1</b> Programming Logic And Syntax</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="programming-logic-and-syntax.html"><a href="programming-logic-and-syntax.html#pseudocode"><i class="fa fa-check"></i><b>1.1</b> Pseudocode</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html"><i class="fa fa-check"></i><b>2</b> Basics of Java Programming</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#classes"><i class="fa fa-check"></i><b>2.1</b> Classes</a></li>
+<li class="chapter" data-level="2.2" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#objects"><i class="fa fa-check"></i><b>2.2</b> Objects</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#attributes-or-properties"><i class="fa fa-check"></i><b>2.2.1</b> Attributes or Properties</a></li>
+<li class="chapter" data-level="2.2.2" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#methods"><i class="fa fa-check"></i><b>2.2.2</b> Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#variables"><i class="fa fa-check"></i><b>2.3</b> Variables</a></li>
+<li class="chapter" data-level="2.4" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#creating-the-first-code-in-java"><i class="fa fa-check"></i><b>2.4</b> Creating the first code in Java</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#creating-variables"><i class="fa fa-check"></i><b>2.4.1</b> Creating Variables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="operadores.html"><a href="operadores.html"><i class="fa fa-check"></i><b>3</b> Operadores</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="operadores.html"><a href="operadores.html#operações-matemáticas"><i class="fa fa-check"></i><b>3.1</b> Operações Matemáticas</a></li>
+<li class="chapter" data-level="3.2" data-path="operadores.html"><a href="operadores.html#operadores-relacionais"><i class="fa fa-check"></i><b>3.2</b> Operadores Relacionais</a></li>
+<li class="chapter" data-level="3.3" data-path="operadores.html"><a href="operadores.html#lógica-booleana-e-operadores-lógicos"><i class="fa fa-check"></i><b>3.3</b> Lógica Booleana e Operadores Lógicos</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="operadores.html"><a href="operadores.html#operador-and"><i class="fa fa-check"></i><b>3.3.1</b> Operador AND</a></li>
+<li class="chapter" data-level="3.3.2" data-path="operadores.html"><a href="operadores.html#operador-or"><i class="fa fa-check"></i><b>3.3.2</b> Operador OR</a></li>
+<li class="chapter" data-level="3.3.3" data-path="operadores.html"><a href="operadores.html#operador-xor"><i class="fa fa-check"></i><b>3.3.3</b> Operador XOR</a></li>
+<li class="chapter" data-level="3.3.4" data-path="operadores.html"><a href="operadores.html#operador-not"><i class="fa fa-check"></i><b>3.3.4</b> Operador NOT</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="extruturas-de-decisão-ou-seleção.html"><a href="extruturas-de-decisão-ou-seleção.html"><i class="fa fa-check"></i><b>4</b> Extruturas de Decisão ou Seleção</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="extruturas-de-decisão-ou-seleção.html"><a href="extruturas-de-decisão-ou-seleção.html#if-else"><i class="fa fa-check"></i><b>4.1</b> If-Else</a></li>
+<li class="chapter" data-level="4.2" data-path="extruturas-de-decisão-ou-seleção.html"><a href="extruturas-de-decisão-ou-seleção.html#operador-ternário"><i class="fa fa-check"></i><b>4.2</b> Operador Ternário</a></li>
+<li class="chapter" data-level="4.3" data-path="extruturas-de-decisão-ou-seleção.html"><a href="extruturas-de-decisão-ou-seleção.html#switch"><i class="fa fa-check"></i><b>4.3</b> Switch</a></li>
+<li class="chapter" data-level="" data-path="extruturas-de-decisão-ou-seleção.html"><a href="extruturas-de-decisão-ou-seleção.html#exercícios"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="estruturas-de-repetição.html"><a href="estruturas-de-repetição.html"><i class="fa fa-check"></i><b>5</b> Estruturas de Repetição</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="estruturas-de-repetição.html"><a href="estruturas-de-repetição.html#for"><i class="fa fa-check"></i><b>5.1</b> For</a></li>
+<li class="chapter" data-level="5.2" data-path="estruturas-de-repetição.html"><a href="estruturas-de-repetição.html#while"><i class="fa fa-check"></i><b>5.2</b> While</a></li>
+<li class="chapter" data-level="5.3" data-path="estruturas-de-repetição.html"><a href="estruturas-de-repetição.html#do-while"><i class="fa fa-check"></i><b>5.3</b> Do-While</a></li>
+<li class="chapter" data-level="" data-path="estruturas-de-repetição.html"><a href="estruturas-de-repetição.html#exercicios"><i class="fa fa-check"></i>Exercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="classes-e-interfaces-importantes-em-java.html"><a href="classes-e-interfaces-importantes-em-java.html"><i class="fa fa-check"></i><b>6</b> Classes e Interfaces Importantes em Java</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="classes-e-interfaces-importantes-em-java.html"><a href="classes-e-interfaces-importantes-em-java.html#classes-1"><i class="fa fa-check"></i><b>6.1</b> Classes</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="classes-e-interfaces-importantes-em-java.html"><a href="classes-e-interfaces-importantes-em-java.html#importando-classes"><i class="fa fa-check"></i><b>6.1.1</b> Importando Classes</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="classes-e-interfaces-importantes-em-java.html"><a href="classes-e-interfaces-importantes-em-java.html#interfaces"><i class="fa fa-check"></i><b>6.2</b> Interfaces</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="classes-e-interfaces-importantes-em-java.html"><a href="classes-e-interfaces-importantes-em-java.html#comparable"><i class="fa fa-check"></i><b>6.2.1</b> Comparable</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html"><i class="fa fa-check"></i><b>7</b> Vetores, Matrizes e Listas</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#arrays"><i class="fa fa-check"></i><b>7.1</b> Arrays</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#acrescentando-ou-mudando-valores"><i class="fa fa-check"></i><b>7.1.1</b> Acrescentando ou Mudando Valores</a></li>
+<li class="chapter" data-level="7.1.2" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#acessando-valores"><i class="fa fa-check"></i><b>7.1.2</b> Acessando Valores</a></li>
+<li class="chapter" data-level="7.1.3" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#valores-e-referências"><i class="fa fa-check"></i><b>7.1.3</b> Valores e Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#matrizes"><i class="fa fa-check"></i><b>7.2</b> Matrizes</a></li>
+<li class="chapter" data-level="7.3" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#listas"><i class="fa fa-check"></i><b>7.3</b> Listas</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#arraylists"><i class="fa fa-check"></i><b>7.3.1</b> ArrayLists</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#exercícios-1"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="coleções.html"><a href="coleções.html"><i class="fa fa-check"></i><b>8</b> Coleções</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="coleções.html"><a href="coleções.html#maps"><i class="fa fa-check"></i><b>8.1</b> Maps</a></li>
+<li class="chapter" data-level="8.2" data-path="coleções.html"><a href="coleções.html#sets-e-hashsets"><i class="fa fa-check"></i><b>8.2</b> Sets e HashSets</a></li>
+<li class="chapter" data-level="8.3" data-path="coleções.html"><a href="coleções.html#stocklist"><i class="fa fa-check"></i><b>8.3</b> StockList</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="tópicos-avançados-em-java.html"><a href="tópicos-avançados-em-java.html"><i class="fa fa-check"></i><b>9</b> Tópicos Avançados em Java</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="tópicos-avançados-em-java.html"><a href="tópicos-avançados-em-java.html#classes-construtores-e-herança"><i class="fa fa-check"></i><b>9.1</b> Classes, Construtores e Herança</a></li>
+<li class="chapter" data-level="9.2" data-path="tópicos-avançados-em-java.html"><a href="tópicos-avançados-em-java.html#composição-encapsulamento-e-polimorfismo"><i class="fa fa-check"></i><b>9.2</b> Composição, Encapsulamento e Polimorfismo</a></li>
+<li class="chapter" data-level="9.3" data-path="tópicos-avançados-em-java.html"><a href="tópicos-avançados-em-java.html#classes-abstratas-e-interfaces"><i class="fa fa-check"></i><b>9.3</b> Classes Abstratas e Interfaces</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="pesquisa-operacional-e-solução-de-problemas.html"><a href="pesquisa-operacional-e-solução-de-problemas.html"><i class="fa fa-check"></i><b>10</b> Pesquisa Operacional e Solução de Problemas</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="pesquisa-operacional-e-solução-de-problemas.html"><a href="pesquisa-operacional-e-solução-de-problemas.html#heurísticas-e-meta-heurísticas"><i class="fa fa-check"></i><b>10.1</b> Heurísticas e Meta-Heurísticas</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="aplicações-em-logística-e-cadeia-de-suprimentos.html"><a href="aplicações-em-logística-e-cadeia-de-suprimentos.html"><i class="fa fa-check"></i><b>11</b> Aplicações em Logística e Cadeia de Suprimentos</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="aplicações-em-logística-e-cadeia-de-suprimentos.html"><a href="aplicações-em-logística-e-cadeia-de-suprimentos.html#cadeia-de-suprimentos-varejista"><i class="fa fa-check"></i><b>11.1</b> Cadeia de Suprimentos Varejista</a></li>
+<li class="chapter" data-level="11.2" data-path="aplicações-em-logística-e-cadeia-de-suprimentos.html"><a href="aplicações-em-logística-e-cadeia-de-suprimentos.html#integração-de-fornecedores-produção-e-distribuição"><i class="fa fa-check"></i><b>11.2</b> Integração de Fornecedores, Produção e Distribuição</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="problemas-clássicos-de-computação.html"><a href="problemas-clássicos-de-computação.html"><i class="fa fa-check"></i><b>12</b> Problemas Clássicos de Computação</a></li>
+<li class="chapter" data-level="" data-path="considerações-finais.html"><a href="considerações-finais.html"><i class="fa fa-check"></i>Considerações Finais</a></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+<li class="chapter" data-level="" data-path="respostas-dos-exercícios.html"><a href="respostas-dos-exercícios.html"><i class="fa fa-check"></i>Respostas dos Exercícios</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Java Programming for Industrial Engineering</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Java Programming for Industrial Engineering</h1>
+<p class="author"><em>Djonathan Quadras, Bruna Rigon and Julia Bremen</em></p>
+</div>
+<div id="welcome" class="section level1 unnumbered hasAnchor">
+<h1>Welcome!<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Welcome to the Java Programming for Industrial Engineering!</p>
+<p>As you can see, the book is still in development and may have several errors (as well as being incomplete).</p>
+<p>If you have any questions or suggestions, feel free to contact me!</p>
+<p>email: <a href="mailto:djonquadras@gmail.com" class="email">djonquadras@gmail.com</a></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="priciples-of-programming.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
