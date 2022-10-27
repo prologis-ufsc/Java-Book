@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Extruturas de Decisão ou Seleção | Java Programming for Industrial Engineering</title>
+  <meta name="description" content="With applications in Logistics and Supply Chain" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Extruturas de Decisão ou Seleção | Java Programming for Industrial Engineering" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="With applications in Logistics and Supply Chain" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Extruturas de Decisão ou Seleção | Java Programming for Industrial Engineering" />
+  
+  <meta name="twitter:description" content="With applications in Logistics and Supply Chain" />
+  
+
+<meta name="author" content="Djonathan Quadras, Bruna Rigon and Julia Bremen" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="operadores.html"/>
+<link rel="next" href="estruturas-de-repetição.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Java Programming for Industrial Engineering</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome!</a></li>
+<li class="chapter" data-level="" data-path="priciples-of-programming.html"><a href="priciples-of-programming.html"><i class="fa fa-check"></i>Priciples of Programming</a>
+<ul>
+<li class="chapter" data-level="" data-path="priciples-of-programming.html"><a href="priciples-of-programming.html#about-the-book"><i class="fa fa-check"></i>About the book</a></li>
+<li class="chapter" data-level="" data-path="priciples-of-programming.html"><a href="priciples-of-programming.html#tools"><i class="fa fa-check"></i>Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="programming-logic-and-syntax.html"><a href="programming-logic-and-syntax.html"><i class="fa fa-check"></i><b>1</b> Programming Logic And Syntax</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="programming-logic-and-syntax.html"><a href="programming-logic-and-syntax.html#pseudocode"><i class="fa fa-check"></i><b>1.1</b> Pseudocode</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html"><i class="fa fa-check"></i><b>2</b> Basics of Java Programming</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#classes"><i class="fa fa-check"></i><b>2.1</b> Classes</a></li>
+<li class="chapter" data-level="2.2" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#objects"><i class="fa fa-check"></i><b>2.2</b> Objects</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#attributes-or-properties"><i class="fa fa-check"></i><b>2.2.1</b> Attributes or Properties</a></li>
+<li class="chapter" data-level="2.2.2" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#methods"><i class="fa fa-check"></i><b>2.2.2</b> Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#variables"><i class="fa fa-check"></i><b>2.3</b> Variables</a></li>
+<li class="chapter" data-level="2.4" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#creating-the-first-code-in-java"><i class="fa fa-check"></i><b>2.4</b> Creating the first code in Java</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="basics-of-java-programming.html"><a href="basics-of-java-programming.html#creating-variables"><i class="fa fa-check"></i><b>2.4.1</b> Creating Variables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="operadores.html"><a href="operadores.html"><i class="fa fa-check"></i><b>3</b> Operadores</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="operadores.html"><a href="operadores.html#operações-matemáticas"><i class="fa fa-check"></i><b>3.1</b> Operações Matemáticas</a></li>
+<li class="chapter" data-level="3.2" data-path="operadores.html"><a href="operadores.html#operadores-relacionais"><i class="fa fa-check"></i><b>3.2</b> Operadores Relacionais</a></li>
+<li class="chapter" data-level="3.3" data-path="operadores.html"><a href="operadores.html#lógica-booleana-e-operadores-lógicos"><i class="fa fa-check"></i><b>3.3</b> Lógica Booleana e Operadores Lógicos</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="operadores.html"><a href="operadores.html#operador-and"><i class="fa fa-check"></i><b>3.3.1</b> Operador AND</a></li>
+<li class="chapter" data-level="3.3.2" data-path="operadores.html"><a href="operadores.html#operador-or"><i class="fa fa-check"></i><b>3.3.2</b> Operador OR</a></li>
+<li class="chapter" data-level="3.3.3" data-path="operadores.html"><a href="operadores.html#operador-xor"><i class="fa fa-check"></i><b>3.3.3</b> Operador XOR</a></li>
+<li class="chapter" data-level="3.3.4" data-path="operadores.html"><a href="operadores.html#operador-not"><i class="fa fa-check"></i><b>3.3.4</b> Operador NOT</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="extruturas-de-decisão-ou-seleção.html"><a href="extruturas-de-decisão-ou-seleção.html"><i class="fa fa-check"></i><b>4</b> Extruturas de Decisão ou Seleção</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="extruturas-de-decisão-ou-seleção.html"><a href="extruturas-de-decisão-ou-seleção.html#if-else"><i class="fa fa-check"></i><b>4.1</b> If-Else</a></li>
+<li class="chapter" data-level="4.2" data-path="extruturas-de-decisão-ou-seleção.html"><a href="extruturas-de-decisão-ou-seleção.html#operador-ternário"><i class="fa fa-check"></i><b>4.2</b> Operador Ternário</a></li>
+<li class="chapter" data-level="4.3" data-path="extruturas-de-decisão-ou-seleção.html"><a href="extruturas-de-decisão-ou-seleção.html#switch"><i class="fa fa-check"></i><b>4.3</b> Switch</a></li>
+<li class="chapter" data-level="" data-path="extruturas-de-decisão-ou-seleção.html"><a href="extruturas-de-decisão-ou-seleção.html#exercícios"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="estruturas-de-repetição.html"><a href="estruturas-de-repetição.html"><i class="fa fa-check"></i><b>5</b> Estruturas de Repetição</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="estruturas-de-repetição.html"><a href="estruturas-de-repetição.html#for"><i class="fa fa-check"></i><b>5.1</b> For</a></li>
+<li class="chapter" data-level="5.2" data-path="estruturas-de-repetição.html"><a href="estruturas-de-repetição.html#while"><i class="fa fa-check"></i><b>5.2</b> While</a></li>
+<li class="chapter" data-level="5.3" data-path="estruturas-de-repetição.html"><a href="estruturas-de-repetição.html#do-while"><i class="fa fa-check"></i><b>5.3</b> Do-While</a></li>
+<li class="chapter" data-level="" data-path="estruturas-de-repetição.html"><a href="estruturas-de-repetição.html#exercicios"><i class="fa fa-check"></i>Exercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="classes-e-interfaces-importantes-em-java.html"><a href="classes-e-interfaces-importantes-em-java.html"><i class="fa fa-check"></i><b>6</b> Classes e Interfaces Importantes em Java</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="classes-e-interfaces-importantes-em-java.html"><a href="classes-e-interfaces-importantes-em-java.html#classes-1"><i class="fa fa-check"></i><b>6.1</b> Classes</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="classes-e-interfaces-importantes-em-java.html"><a href="classes-e-interfaces-importantes-em-java.html#importando-classes"><i class="fa fa-check"></i><b>6.1.1</b> Importando Classes</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="classes-e-interfaces-importantes-em-java.html"><a href="classes-e-interfaces-importantes-em-java.html#interfaces"><i class="fa fa-check"></i><b>6.2</b> Interfaces</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="classes-e-interfaces-importantes-em-java.html"><a href="classes-e-interfaces-importantes-em-java.html#comparable"><i class="fa fa-check"></i><b>6.2.1</b> Comparable</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html"><i class="fa fa-check"></i><b>7</b> Vetores, Matrizes e Listas</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#arrays"><i class="fa fa-check"></i><b>7.1</b> Arrays</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#acrescentando-ou-mudando-valores"><i class="fa fa-check"></i><b>7.1.1</b> Acrescentando ou Mudando Valores</a></li>
+<li class="chapter" data-level="7.1.2" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#acessando-valores"><i class="fa fa-check"></i><b>7.1.2</b> Acessando Valores</a></li>
+<li class="chapter" data-level="7.1.3" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#valores-e-referências"><i class="fa fa-check"></i><b>7.1.3</b> Valores e Referências</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#matrizes"><i class="fa fa-check"></i><b>7.2</b> Matrizes</a></li>
+<li class="chapter" data-level="7.3" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#listas"><i class="fa fa-check"></i><b>7.3</b> Listas</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#arraylists"><i class="fa fa-check"></i><b>7.3.1</b> ArrayLists</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="vetores-matrizes-e-listas.html"><a href="vetores-matrizes-e-listas.html#exercícios-1"><i class="fa fa-check"></i>Exercícios</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="coleções.html"><a href="coleções.html"><i class="fa fa-check"></i><b>8</b> Coleções</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="coleções.html"><a href="coleções.html#maps"><i class="fa fa-check"></i><b>8.1</b> Maps</a></li>
+<li class="chapter" data-level="8.2" data-path="coleções.html"><a href="coleções.html#sets-e-hashsets"><i class="fa fa-check"></i><b>8.2</b> Sets e HashSets</a></li>
+<li class="chapter" data-level="8.3" data-path="coleções.html"><a href="coleções.html#stocklist"><i class="fa fa-check"></i><b>8.3</b> StockList</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="tópicos-avançados-em-java.html"><a href="tópicos-avançados-em-java.html"><i class="fa fa-check"></i><b>9</b> Tópicos Avançados em Java</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="tópicos-avançados-em-java.html"><a href="tópicos-avançados-em-java.html#classes-construtores-e-herança"><i class="fa fa-check"></i><b>9.1</b> Classes, Construtores e Herança</a></li>
+<li class="chapter" data-level="9.2" data-path="tópicos-avançados-em-java.html"><a href="tópicos-avançados-em-java.html#composição-encapsulamento-e-polimorfismo"><i class="fa fa-check"></i><b>9.2</b> Composição, Encapsulamento e Polimorfismo</a></li>
+<li class="chapter" data-level="9.3" data-path="tópicos-avançados-em-java.html"><a href="tópicos-avançados-em-java.html#classes-abstratas-e-interfaces"><i class="fa fa-check"></i><b>9.3</b> Classes Abstratas e Interfaces</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="pesquisa-operacional-e-solução-de-problemas.html"><a href="pesquisa-operacional-e-solução-de-problemas.html"><i class="fa fa-check"></i><b>10</b> Pesquisa Operacional e Solução de Problemas</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="pesquisa-operacional-e-solução-de-problemas.html"><a href="pesquisa-operacional-e-solução-de-problemas.html#heurísticas-e-meta-heurísticas"><i class="fa fa-check"></i><b>10.1</b> Heurísticas e Meta-Heurísticas</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="aplicações-em-logística-e-cadeia-de-suprimentos.html"><a href="aplicações-em-logística-e-cadeia-de-suprimentos.html"><i class="fa fa-check"></i><b>11</b> Aplicações em Logística e Cadeia de Suprimentos</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="aplicações-em-logística-e-cadeia-de-suprimentos.html"><a href="aplicações-em-logística-e-cadeia-de-suprimentos.html#cadeia-de-suprimentos-varejista"><i class="fa fa-check"></i><b>11.1</b> Cadeia de Suprimentos Varejista</a></li>
+<li class="chapter" data-level="11.2" data-path="aplicações-em-logística-e-cadeia-de-suprimentos.html"><a href="aplicações-em-logística-e-cadeia-de-suprimentos.html#integração-de-fornecedores-produção-e-distribuição"><i class="fa fa-check"></i><b>11.2</b> Integração de Fornecedores, Produção e Distribuição</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="problemas-clássicos-de-computação.html"><a href="problemas-clássicos-de-computação.html"><i class="fa fa-check"></i><b>12</b> Problemas Clássicos de Computação</a></li>
+<li class="chapter" data-level="" data-path="considerações-finais.html"><a href="considerações-finais.html"><i class="fa fa-check"></i>Considerações Finais</a></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+<li class="chapter" data-level="" data-path="respostas-dos-exercícios.html"><a href="respostas-dos-exercícios.html"><i class="fa fa-check"></i>Respostas dos Exercícios</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Java Programming for Industrial Engineering</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="extruturas-de-decisão-ou-seleção" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Extruturas de Decisão ou Seleção<a href="extruturas-de-decisão-ou-seleção.html#extruturas-de-decisão-ou-seleção" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>É comum nos códigos encontrarmos situações como a situação abaixo.</p>
+<div class="figure">
+<img src="imagens/decisores.png" alt="" />
+<p class="caption">Decisores</p>
+</div>
+<p>Ou seja, o programa irá tomar uma decisão diferente para condições diferentes. Existem duas formas de selecionar em Java, que serão explicadas nas subseções seguintes.</p>
+<div id="if-else" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> If-Else<a href="extruturas-de-decisão-ou-seleção.html#if-else" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A seleção por if tem a forma apresentada abaixo. Depois da palavra-chave if é necessária uma expressão booleana entre parênteses. Caso a expressão booleana resulte no valor true em tempo de execução então o bloco seguinte será executado, caso resulte em false aquele será ignorado.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="extruturas-de-decisão-ou-seleção.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span><span class="op">(</span>condiçãoBooleana<span class="op">){</span></span>
+<span id="cb4-2"><a href="extruturas-de-decisão-ou-seleção.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">//Instrução a ser executada caso a condiçãoBooleana seja verdadeira.</span></span>
+<span id="cb4-3"><a href="extruturas-de-decisão-ou-seleção.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Existem também as variações do método if. Uma delas é o if/else. A instrução de seleção dupla if/else tem função complementar à de if: executa instruções no caso da expressão booleana de if resultar em false.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="extruturas-de-decisão-ou-seleção.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>condiçãoBooleana<span class="op">){</span></span>
+<span id="cb5-2"><a href="extruturas-de-decisão-ou-seleção.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">//instruções que serão executadas caso a condiçãoBooleana resulte true.</span></span>
+<span id="cb5-3"><a href="extruturas-de-decisão-ou-seleção.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb5-4"><a href="extruturas-de-decisão-ou-seleção.html#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">//instruções que serão executadas caso a condiçãoBooleana resulte false.</span></span>
+<span id="cb5-5"><a href="extruturas-de-decisão-ou-seleção.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Complementar ao “if/else” temos o operador “else if”. Esse recurso possibilita adicionar uma nova condição à estrutura de decisão para atender a lógica sendo implementada.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="extruturas-de-decisão-ou-seleção.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>condiçãoBooleana<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-2"><a href="extruturas-de-decisão-ou-seleção.html#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">//instruções que serão executadas caso a condiçãoBooleana resulte true.</span></span>
+<span id="cb6-3"><a href="extruturas-de-decisão-ou-seleção.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span><span class="op">(</span>outraCondiçãoBooleana<span class="op">){</span></span>
+<span id="cb6-4"><a href="extruturas-de-decisão-ou-seleção.html#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">//instruções que serão executadas caso a outraCondiçãoBooleana resulte true.</span></span>
+<span id="cb6-5"><a href="extruturas-de-decisão-ou-seleção.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+</div>
+<div id="operador-ternário" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Operador Ternário<a href="extruturas-de-decisão-ou-seleção.html#operador-ternário" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>O operador ternário é uma forma compacta de se montar um operador <em>if-else</em>. Ele é utilizado para alocar valor em alguma determinada variável. Diferentemente do <em>if-else</em>, ele <strong>não</strong> realiza operações. Sua estrutura é igual ao apresentado abaixo.</p>
+<pre><code>var = (lógica booleana) ? (Valor 1):(Valor 2)</code></pre>
+<p>Ou seja, a variável <code>var</code> receberá qualquer um dos dois valores dependendo do resultado da lógica booleana, recebendo o <code>Valor 1</code> em caso de resultado igual a <code>true</code> e <code>Valor 2</code> em caso de resultado igual a false. Perceba o caso abaixo.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="extruturas-de-decisão-ou-seleção.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb8-2"><a href="extruturas-de-decisão-ou-seleção.html#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-3"><a href="extruturas-de-decisão-ou-seleção.html#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> a <span class="op">=</span> <span class="dv">7</span><span class="op">;</span></span>
+<span id="cb8-4"><a href="extruturas-de-decisão-ou-seleção.html#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> b <span class="op">=</span> <span class="dv">6</span><span class="op">;</span></span>
+<span id="cb8-5"><a href="extruturas-de-decisão-ou-seleção.html#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> valor<span class="op">;</span></span>
+<span id="cb8-6"><a href="extruturas-de-decisão-ou-seleção.html#cb8-6" aria-hidden="true" tabindex="-1"></a>        valor <span class="op">=</span> a <span class="op">&gt;</span> b <span class="op">?</span> <span class="st">&quot;a é maior que b&quot;</span><span class="op">:</span><span class="st">&quot;a é menor que b&quot;</span><span class="op">;</span></span>
+<span id="cb8-7"><a href="extruturas-de-decisão-ou-seleção.html#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-8"><a href="extruturas-de-decisão-ou-seleção.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Neste caso, como <code>a</code> de fato é maior que <code>b</code>, a lógica booleana resultará em um valor igual a <code>true</code>, retornando para a variável valor a string <code>"a é maior que b"</code>.</p>
+</div>
+<div id="switch" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Switch<a href="extruturas-de-decisão-ou-seleção.html#switch" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>O operador <em>switch</em> é muito útil para a tomada de decisões em um programa. Sua estrutura se assemelha à uma estrada, onde os caminhos já estão pré-determinados. Dessa forma, a decisão de qual caminho seguir é baseada no valor da entrada do decisor.</p>
+<div class="figure">
+<img src="imagens/switch.png" alt="" />
+<p class="caption">Switch</p>
+</div>
+<p>A estrutura do sistema de decisão igual ao apresentado abaixo. A função <code>switch</code> irá avaliar a variável <code>var</code>. Cada <code>case</code> corresponde a um possível valor que <code>var</code> pode assumir. Caso o valor de <code>var</code> não esteja presente em nenhuma das opções, o <code>switch</code> irá para a opção <code>default</code> que é a resposta padrão.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="extruturas-de-decisão-ou-seleção.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">switch</span> <span class="op">(</span><span class="dt">var</span><span class="op">){</span></span>
+<span id="cb9-2"><a href="extruturas-de-decisão-ou-seleção.html#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> Valor1<span class="op">:</span></span>
+<span id="cb9-3"><a href="extruturas-de-decisão-ou-seleção.html#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="co">//Realiza as essas operações</span></span>
+<span id="cb9-4"><a href="extruturas-de-decisão-ou-seleção.html#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb9-5"><a href="extruturas-de-decisão-ou-seleção.html#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> Valor2<span class="op">:</span></span>
+<span id="cb9-6"><a href="extruturas-de-decisão-ou-seleção.html#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">//Realiza as essas operações</span></span>
+<span id="cb9-7"><a href="extruturas-de-decisão-ou-seleção.html#cb9-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb9-8"><a href="extruturas-de-decisão-ou-seleção.html#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">default</span><span class="op">:</span></span>
+<span id="cb9-9"><a href="extruturas-de-decisão-ou-seleção.html#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="co">//Realiza as essas operações paadrão</span></span>
+<span id="cb9-10"><a href="extruturas-de-decisão-ou-seleção.html#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb9-11"><a href="extruturas-de-decisão-ou-seleção.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>A variável <code>var</code> pode ser de qualquer tipo (<em>int, double, string</em>…). Perceba o código apresentado abaixo. Se correr o código, será apresentado no console a resposta <code>“Muito!”</code>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="extruturas-de-decisão-ou-seleção.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
+<span id="cb10-2"><a href="extruturas-de-decisão-ou-seleção.html#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-3"><a href="extruturas-de-decisão-ou-seleção.html#cb10-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> <span class="dt">var</span> <span class="op">=</span> <span class="st">&quot;Disposto?&quot;</span><span class="op">;</span></span>
+<span id="cb10-4"><a href="extruturas-de-decisão-ou-seleção.html#cb10-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">switch</span> <span class="op">(</span><span class="dt">var</span><span class="op">){</span></span>
+<span id="cb10-5"><a href="extruturas-de-decisão-ou-seleção.html#cb10-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">case</span> <span class="st">&quot;Oi, tudo bem?&quot;</span><span class="op">:</span></span>
+<span id="cb10-6"><a href="extruturas-de-decisão-ou-seleção.html#cb10-6" aria-hidden="true" tabindex="-1"></a>                <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Tudo! E com voce?&quot;</span><span class="op">);</span></span>
+<span id="cb10-7"><a href="extruturas-de-decisão-ou-seleção.html#cb10-7" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-8"><a href="extruturas-de-decisão-ou-seleção.html#cb10-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">case</span> <span class="st">&quot;Bom dia!&quot;</span><span class="op">:</span></span>
+<span id="cb10-9"><a href="extruturas-de-decisão-ou-seleção.html#cb10-9" aria-hidden="true" tabindex="-1"></a>                <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Flor do Dia!&quot;</span><span class="op">);</span></span>
+<span id="cb10-10"><a href="extruturas-de-decisão-ou-seleção.html#cb10-10" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-11"><a href="extruturas-de-decisão-ou-seleção.html#cb10-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">case</span> <span class="st">&quot;Disposto?&quot;</span><span class="op">:</span></span>
+<span id="cb10-12"><a href="extruturas-de-decisão-ou-seleção.html#cb10-12" aria-hidden="true" tabindex="-1"></a>                <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;Muito!&quot;</span><span class="op">);</span></span>
+<span id="cb10-13"><a href="extruturas-de-decisão-ou-seleção.html#cb10-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb10-14"><a href="extruturas-de-decisão-ou-seleção.html#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-15"><a href="extruturas-de-decisão-ou-seleção.html#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+</div>
+<div id="exercícios" class="section level2 unnumbered hasAnchor">
+<h2>Exercícios<a href="extruturas-de-decisão-ou-seleção.html#exercícios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Qual a diferença entre uma estrutura de decisão estilo <em>if-else</em> e um Operador Ternário?</li>
+<li>Crie um código em Java que contenha uma variável do tipo inteiro e que imprima no console se o número é par ou ímpar.</li>
+<li>Faça um programa que contenha três variáveis: dinheiro, preço e limite do cartão. A variável “dinheiro” representa a quantidade de dinheiro presente na carteira, “preço” é o preço de um lanche e “limite no cartão” é o limite disponível para compras no cartão de crédito. O processo de análise é feito da seguinte forma (note que deve-se retornar, em caso de compra, qual o a opção de pagamento escolhida):</li>
+</ol>
+<ul>
+<li>Se houver dinheiro suficiente disponível na carteira, a compra será feita totalmente em dinheiro;</li>
+<li>Caso contrário, se houver limite disponível, a compra deverá ser feita totalmente no cartão de crédito;</li>
+<li>Caso contrário, deve-se analisar se é possível comprar o lanche juntando os valores de dinheiro disponível e limite de cartão;</li>
+<li>Caso seja possível, deve-se pagar a totalidade do valor disponível em dinheiro e pagar o restante em cartão. Neste caso, deve-se dizer quanto será pago no cartão;</li>
+<li>Caso contrário, deve-se retornar a mensagem “Você não pode pagar, que pena!”.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Utilizando a mesma situação do exercício anterior, acrescente agora a variável booleana “vontade”, que é a vontade da pessoa em pagar o lanche utilizando o cartão. As análises que envolvem pagar com o cartão ficarão, então, em função dessa nova variável.</li>
+<li>Faça um código que receba uma variável do tipo inteiro de valor entre 1 e 5, cada um correspondente a um dia útil da semana. O código deve imprimir no console o dia da semana correspondente. Caso a variável tenha um valor diferente, o programa deve imprimir no console a frase “Esse não é dia de feira!”.</li>
+<li>Faça um código semelhante ao anterior. Crie uma variável do tipo <em>string</em> chamada idioma e faça com que o programa responda no console nos seguintes idiomas: português, inglês e espanhol. Caso seja inserido outro idioma, o programa deve responder “Idioma não reconhecido”.</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="operadores.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estruturas-de-repetição.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-Decisao.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Java-Book.pdf", "Java-Book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
